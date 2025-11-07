@@ -1,0 +1,65 @@
+{
+  "books": [
+    {
+      "title": "파이썬 완전정복",
+      "author": "김코딩",
+      "isbn": "9781234567890",
+      "stock": 3,
+      "borrow_count": 2
+    },
+    {
+      "title": "데이터 과학 입문",
+      "author": "이데이터",
+      "isbn": "9781234567891",
+      "stock": 2,
+      "borrow_count": 0
+    },
+    {
+      "title": "웹 개발의 모든 것",
+      "author": "박웹개",
+      "isbn": "9781234567892",
+      "stock": 5,
+      "borrow_count": 0
+    },
+    {
+      "title": "AI 프로그래밍",
+      "author": "최인공",
+      "isbn": "9781234567893",
+      "stock": 1,
+      "borrow_count": 0
+    },
+    {
+      "title": "알고리즘 기초",
+      "author": "정알고",
+      "isbn": "9781234567894",
+      "stock": 4,
+      "borrow_count": 0
+    }
+  ],
+  "members": [
+    {
+      "name": "홍길동",
+      "member_id": "user01"
+    },
+    {
+      "name": "김데이터",
+      "member_id": "user02"
+    },
+    {
+      "name": "박상선",
+      "member_id": "1234"
+    }
+  ],
+  "records": [
+    {
+      "title": "파이썬 완전정복",
+      "member_id": "user01",
+      "date": "2025-11-07 15:12:07"
+    },
+    {
+      "title": "파이썬 완전정복",
+      "member_id": "1234",
+      "date": "2025-11-07 15:12:47"
+    }
+  ]
+}
