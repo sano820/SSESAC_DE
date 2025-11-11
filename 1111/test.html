@@ -1,0 +1,141 @@
+<!-- 
+<html> = 문서의 루트로 HTML의 시작을 알림
+<head> = 문서의 서문의 시작과 끝
+<body> = 문서의 본문의 시작과 끝
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS를 쓰기 위한 태그 -->
+
+    <style> 
+        /* 모든 p 태그에 대해서 글씨 색상을 빨간 색으로 지정*/
+        p {
+            color : red;
+        }
+        /* id가 tagp인 모든 태그 글씨 색상을 초록색으로, li태그 중 id가 item인 것만 글씨 색상 보라색으로 지정*/
+        #tagp{
+            color : green;
+        }
+        li#item{
+            color: blueviolet;
+        }
+        /* class = "item"인 모든 요소에 대해 해당 속성 지정 */
+        .item{
+            color:cornflowerblue;
+        }
+        /* body의 직계 자식인 p 태그에 대해서 해당 속성 지정 */
+        body > p {
+            color : orange;
+        }
+        ol > li:nth-child(3) {
+            color:blue;
+        }
+    </style>
+
+
+</head>
+
+<body> <!-- body라는 이름의 태그를 열었다(open) -->
+    <!-- 이 태그 안에 넣을 contents-->
+    <!-- body: 웹페이지의 본문이 역할 = 실질적인 화면-->
+    
+    <header>
+        <h1>로고</h1>
+    </header>
+    
+    <nav>
+        <a href="#">메뉴</a>
+    </nav>
+
+    <main>
+        <section>
+            <h3>관련 정보</h3>
+        </section>
+
+        <aside>
+            <p>광고 영역</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>저작권 2025</p>
+    </footer> 
+   
+
+
+    <!-- 제목 태그 -->
+    <h1>가장 큰 제목</h1>
+    <h2>두 번째 큰 제목</h2>
+    <h6>여섯번째로 큰 제목</h6>
+    <h4>기본태그랑 비슷한 크기 h4</h4>
+
+    <!-- 문단 태그 -->
+    <p>문단 태그 p</p>
+    <p id ="tagp">이것은 문단입니다.</p>
+
+    <!-- 링크 태그 -->
+    <a href = "https://scopelabs.notion.site/275acc5ec8ff805ca077ef9a90f374d9" target="'balnk">강의 자료 새 탭으로 이동</a>
+
+    <!--이미지 링크-->
+    <img src = "data:image/jpeg;base64,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" alt="선글라스 고양이">
+
+    <!-- 순서가 없는 리스트-->
+     <ul>
+        <!--리스트에 들어갈 항목들 넣자!-->
+        <li id = "item">hTML</li>
+        <li class = "item">CSS</li>
+        <li class = "item">JS</li>
+     </ul>
+
+     <!-- 순서가 있는 리스트-->
+      <ol>
+        <li>첫 번째 항목
+            <ol>
+                <li>첫 번째 항목의 첫번째 항목</li>
+                <li>첫 번째 항목의 두번째 항목</li>
+            </ol>
+        </li>
+        <li>두 번째 항목</li>
+        <li>세 번째 항목</li>
+      </ol>
+
+    <!-- 테이블 태그 -->
+    <table border = '1'>
+        <tr> <!--tr은 테이블 row-->
+            <td>이름</td> <!-- 테이블에 담길 데이터-->
+            <td>나이</td>
+            <td>성별</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>25</td>
+            <td>남자</td>
+        </tr>
+        <tr>
+            <td>도봉순</td>
+            <td>30</td>
+            <td>여자</td>
+        </tr>
+    </table>
+
+    <!-- 그외 다른 태그들-->
+    <div>
+        <h2>공지사항</h2>
+        <p>오늘은 <span>정기 점검</span>으로 서비스가 잠시 중단됩니다.</p>
+    </div>
+    <div>
+        <h2>이벤트</h2>
+        <p><span>신규 회원</span>에게 10% 할인 쿠폰을 드립니다.</p>
+    </div>
+
+
+
+</body> <!-- body라는 이름의 태그를 닫았다(close)-->
+</html>
