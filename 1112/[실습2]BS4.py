@@ -80,7 +80,6 @@ for c in categories:
             price = item.select_one("div.product_price p.price_color").get_text(strip=True)
 
 
-                    
             data.append({
                     "title": title,
                     "price":price,
@@ -128,7 +127,7 @@ for c in categories:
 
 
 with open("./1112/outputs/[mission2]answers.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
+    json.dump(answer, f, ensure_ascii=False, indent=2)
 
 # df = pd.DataFrame(data)
 # df.to_csv(f"./1112/outputs/bs4_answers_tag.csv", index=False, encoding="utf-8")
