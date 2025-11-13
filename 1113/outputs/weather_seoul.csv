@@ -1,0 +1,2 @@
+﻿city,country,lon,lat,weather_main,weather_desc,temp(K),feels_like(K),humidity(%),wind_speed(m/s),clouds(%)
+Seoul,KR,126.9778,37.5683,Clear,clear sky,285.91,284.99,67,4.12,0
