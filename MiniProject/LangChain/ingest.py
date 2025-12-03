@@ -27,8 +27,10 @@ def main(pdf_dir: str = None, persist_dir: str = None):
     persist_dir.mkdir(parents=True, exist_ok=True)
 
     vectordb = Chroma.from_documents(
-        documents=chunks,
-        embedding_function=embed,
+        # documents=chunks,
+        chunks,
+        # embedding_function=embed,
+        embed,
         persist_directory=str(persist_dir),
     )
     vectordb.persist()

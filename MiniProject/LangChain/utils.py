@@ -1,8 +1,8 @@
 # utils.py
 
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.text_splitter import CharacterTextSplitter
-from langchain_community.schema import Document
+from langchain_text_splitters import CharacterTextSplitter
+from langchain_core.documents import Document
 from typing import List
 from pathlib import Path
 

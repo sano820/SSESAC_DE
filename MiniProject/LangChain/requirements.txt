@@ -9,6 +9,8 @@ tiktoken
 python-dotenv
 langchain-ollama
 langchain-community
+pypdf
 
+langchain-huggingface
 # optional but recommended for speed
 faiss-cpu
