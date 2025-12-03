@@ -1,0 +1,13 @@
+# requirements.txt
+streamlit
+langchain 
+chromadb
+sentence-transformers
+PyPDF2
+openai
+tiktoken
+python-dotenv
+langchain-ollama
+langchain-community
+# optional but recommended for speed
+faiss-cpu
