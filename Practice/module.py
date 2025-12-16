@@ -1,8 +1,17 @@
-from langchain_openai import ChatOpenAI
+# module.py
+from functools import lru_cache
+
+from typing import List, Optional, Dict
 from openai import OpenAI
+from langchain_openai import ChatOpenAI
 
-from typing import List
+#------ 객체 생성 한번하기
+@lru_cache(maxsize=1)
+def get_client() -> OpenAI:
+    # OpenAI()는 프로그램 전체에서 딱 1번만 생성되어 재사용됨
+    return OpenAI()
 
+#-----------1215
 
 def test_openai():
     model = ChatOpenAI(model = 'gpt-4o', temperature=0)
@@ -10,13 +19,13 @@ def test_openai():
     print(ai_message)
 
 def respon(input = False):
-    message =[{'role':'system', 'content':'You are a 10years developer of AI', 'role':'user', 'content':input}]
+    message =[{'role':'system', 'content':'You are a 10years developer of AI'},{ 'role':'user', 'content':input}]
     client = OpenAI()
     response = client.chat.completions.create(model = 'gpt-4o', messages= message)
-    return dict(response)
+    return response
 
-def check_content(response):
-    content = response["choices"][0].message.content
+def check_content(response) -> str:
+    content = response.choices[0].message.content
     return content
 
 
@@ -53,7 +62,7 @@ def run_router_workflow(user_prompt:str):
     각 모델은 서로 다른 기능을 가지고 있습니다. 사용자의 질문에 가장 적합한 모델을 선택하세요:
     
     gpt-4o: 일반적인 작업에 가장 적합한 모델 (기본값)
-    gpt-5.2: 코딩 및 복잡한 문제 해결에 적합한 모델
+    gpt-5.2-thinking: 코딩 및 복잡한 문제 해결에 적합한 모델
     gpt-4o-mini: 간단한 사칙연산 등의 작업에 적합한 모델
 
     모델명만 단답형으로 응답하세요
@@ -61,3 +70,6 @@ def run_router_workflow(user_prompt:str):
     selected_model = llm_call(router_prompt)
     response = llm_call(user_prompt, model = selected_model)
     return response
+
+
+# ---------- 비동기 + 라우터
