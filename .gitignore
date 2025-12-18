@@ -8,6 +8,7 @@ __pycache__/
 
 # Data directories (all locations)
 **/data/
+**/db/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -18,3 +19,6 @@ __pycache__/
 *.pyc
 
 **/output/
+
+**/langchain/
+**/chat/
